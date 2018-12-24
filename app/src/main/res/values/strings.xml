@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AstroLight</string>
+    <string name="app_sentence">Les étoiles c\'est rigolo</string>
+    <string name="activate">Activer</string>
+    <string name="brightness">Luminosité :</string>
+</resources>

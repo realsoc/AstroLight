@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" package="com.falouvaleu.astrolight">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/shooting_star"
+            android:label="@string/app_name"
+            android:name=".AstroLightApplication"
+            android:roundIcon="@drawable/shooting_star"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".LightActivity"
+        android:launchMode="singleTask"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <service android:name=".LightService"/>
+        <service
+                android:name=".LightTileService"
+                android:icon="@drawable/shooting_star"
+                android:label="@string/app_name"
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                        android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
